@@ -1,4 +1,5 @@
 using namespace std;
+
 enum type
 {
 
@@ -33,7 +34,7 @@ public:
     {
         int verdi = angrip(angrep);
         switch (verdi){
-            case 0: 
+            case 0:
                 return "Not effective";
             case 50:
                 return "It's not very effective";
@@ -48,7 +49,7 @@ public:
 
     int angrip(type angrep)
     {
-        
+
         switch(art){
 
         case NORMAL:
@@ -62,7 +63,7 @@ public:
             }
             break;
 
-        
+
         case FIRE:
             switch (angrep){
                 case FIRE:
@@ -120,26 +121,635 @@ public:
                     return 100;
             }
             break;
+        case GRASS:
+            switch (angrep){
+                  case NORMAL:
+                      return 100;
+                  case FIRE:
+                      return 200;
+                  case WATER:
+                      return 50;
+                  case ELECTRIC:
+                      return 50;
+                  case GRASS:
+                      return 50;
+                  case ICE:
+                      return 200;
+                  case FIGHTING:
+                      return 100;
+                  case POISON:
+                      return 200;
+                  case GROUND:
+                      return 50;
+                  case FLYING:
+                      return 200;
+                  case PSYCHIC:
+                      return 100;
+                  case BUG:
+                      return 200;
+                  case ROCK:
+                      return 100;
+                  case GHOST:
+                      return 100;
+                  case DRAGON:
+                      return 100;
+                  case DARK:
+                      return 100;
+                  case STEEL:
+                      return 100;
+                  case FAIRY:
+                      return 100;
+                  default:
+                      return 100;
+                  }
+                  break;
+              case ICE:
+                 switch (angrep){
+                    case NORMAL:
+                        return 100;
+                    case FIRE:
+                        return 200;
+                    case WATER:
+                        return  100;
+                    case ELECTRIC:
+                        return 100;
+                    case GRASS:
+                        return 100;
+                    case ICE:
+                        return 50;
+                    case FIGHTING:
+                        return 200;
+                    case POISON:
+                        return 100;
+                    case GROUND:
+                        return 100;
+                    case FLYING:
+                        return 100;
+                    case PSYCHIC:
+                        return 100;
+                    case BUG:
+                        return 100;
+                    case ROCK:
+                        return 200;
+                    case GHOST:
+                        return 100;
+                    case DRAGON:
+                        return 100;
+                    case DARK:
+                        return 100;
+                    case STEEL:
+                        return 200;
+                    case FAIRY:
+                        return 100;
+                    default:
+                        return 100;
+                    }
+                    break;
+                case FIGHTING:
+                    switch (angrep){
+                      case NORMAL:
+                          return 100;
+                      case FIRE:
+                          return 100;
+                      case WATER:
+                          return  100;
+                      case ELECTRIC:
+                          return 100;
+                      case GRASS:
+                          return 100;
+                      case ICE:
+                          return 100;
+                      case FIGHTING:
+                          return 100;
+                      case POISON:
+                          return 100;
+                      case GROUND:
+                          return 100;
+                      case FLYING:
+                          return 200;
+                      case PSYCHIC:
+                          return 200;
+                      case BUG:
+                          return 50;
+                      case ROCK:
+                          return 50;
+                      case GHOST:
+                          return 100;
+                      case DRAGON:
+                          return 100;
+                      case DARK:
+                          return 50;
+                      case STEEL:
+                          return 100;
+                      case FAIRY:
+                          return 200;
+                      default:
+                          return 100;
+                      }
+                      break;
+          case 18:
+              switch (angrep){
+                case NORMAL:
+                    return 100;
+                case FIRE:
+                    return 100;
+                case WATER:
+                    return  100;
+                case GRASS:
+                    return 100;
+                case ICE:
+                    return 100;
+                case FIGHTING:
+                    return 100;
+                case POISON:
+                    return 100;
+                case GROUND:
+                    return 100;
+                case FLYING:
+                    return 100;
+                case PSYCHIC:
+                    return 100;
+                case BUG:
+                    return 100;
+                case ROCK:
+                    return 100;
+                case GHOST:
+                    return 100;
+                case DRAGON:
+                    return 100;
+                case DARK:
+                    return 100;
+                case STEEL:
+                    return 100;
+                case FAIRY:
+                    return 100;
+                default:
+                    return 100;
+                }
+                break;
+            case POISON:
+                switch (angrep){
+                  case NORMAL:
+                      return 100;
+                  case FIRE:
+                      return 100;
+                  case WATER:
+                      return  100;
+                  case ELECTRIC:
+                      return 100;
+                  case GRASS:
+                      return 50;
+                  case ICE:
+                      return 100;
+                  case FIGHTING:
+                      return 50;
+                  case POISON:
+                      return 50;
+                  case GROUND:
+                      return 200;
+                  case FLYING:
+                      return 100;
+                  case PSYCHIC:
+                      return 200;
+                  case BUG:
+                      return 50;
+                  case ROCK:
+                      return 100;
+                  case GHOST:
+                      return 100;
+                  case DRAGON:
+                      return 100;
+                  case DARK:
+                      return 100;
+                  case STEEL:
+                      return 100;
+                  case FAIRY:
+                      return 50;
+                  default:
+                      return 100;
+                  }
+                  break;
+              case GROUND:
+                  switch (angrep){
+                    case NORMAL:
+                        return 100;
+                    case FIRE:
+                        return 100;
+                    case WATER:
+                        return  200;
+                    case ELECTRIC:
+                        return 0;
+                    case GRASS:
+                        return 200;
+                    case ICE:
+                        return 200;
+                    case FIGHTING:
+                        return 100;
+                    case POISON:
+                        return 50;
+                    case GROUND:
+                        return 100;
+                    case FLYING:
+                        return 100;
+                    case PSYCHIC:
+                        return 100;
+                    case BUG:
+                        return 100;
+                    case ROCK:
+                        return 50;
+                    case GHOST:
+                        return 100;
+                    case DRAGON:
+                        return 100;
+                    case DARK:
+                        return 100;
+                    case STEEL:
+                        return 100;
+                    case FAIRY:
+                        return 100;
+                    default:
+                        return 100;
+                    }
+                    break;
+                case FLYING:
+                    switch (angrep){
+                      case NORMAL:
+                          return 100;
+                      case FIRE:
+                          return 100;
+                      case WATER:
+                          return 100;
+                      case ELECTRIC:
+                          return 200;
+                      case GRASS:
+                          return 50;
+                      case ICE:
+                          return 200;
+                      case FIGHTING:
+                          return 50;
+                      case POISON:
+                          return 100;
+                      case GROUND:
+                          return 100;
+                      case FLYING:
+                          return 100;
+                      case PSYCHIC:
+                          return 100;
+                      case BUG:
+                          return 50;
+                      case ROCK:
+                          return 200;
+                      case GHOST:
+                          return 100;
+                      case DRAGON:
+                          return 100;
+                      case DARK:
+                          return 100;
+                      case STEEL:
+                          return 100;
+                      case FAIRY:
+                          return 100;
+                      default:
+                          return 100;
+                      }
+                      break;
+                  case PSYCHIC:
+                      switch (angrep){
+                        case NORMAL:
+                            return 100;
+                        case FIRE:
+                            return 100;
+                        case WATER:
+                            return 100;
+                        case ELECTRIC:
+                            return 100;
+                        case GRASS:
+                            return 100;
+                        case ICE:
+                            return 100;
+                        case FIGHTING:
+                            return 50;
+                        case POISON:
+                            return 100;
+                        case GROUND:
+                            return 100;
+                        case FLYING:
+                            return 100;
+                        case PSYCHIC:
+                            return 50;
+                        case BUG:
+                            return 50;
+                        case ROCK:
+                            return 100;
+                        case GHOST:
+                            return 50;
+                        case DRAGON:
+                            return 100;
+                        case DARK:
+                            return 50;
+                        case STEEL:
+                            return 100;
+                        case FAIRY:
+                            return 100;
+                        default:
+                            return 100;
+                        }
+                        break;
+                case BUG:
+                    switch (angrep){
+                      case NORMAL:
+                          return 100;
+                      case FIRE:
+                          return 200;
+                      case WATER:
+                          return 100;
+                      case ELECTRIC:
+                          return 100;
+                      case GRASS:
+                          return 50;
+                      case ICE:
+                          return 100;
+                      case FIGHTING:
+                          return 50;;
+                      case POISON:
+                          return 100;
+                      case GROUND:
+                          return 50;;
+                      case FLYING:
+                          return 200;
+                      case PSYCHIC:
+                          return 100;
+                      case BUG:
+                          return 100;
+                      case ROCK:
+                          return 200;
+                      case GHOST:
+                          return 100;
+                      case DRAGON:
+                          return 100;
+                      case DARK:
+                          return 100;
+                      case STEEL:
+                          return 100;
+                      case FAIRY:
+                          return 100;
+                      default:
+                          return 100;
+                      }
+                      break;
+                  case ROCK:
+                      switch (angrep){
+                        case NORMAL:
+                            return 50;
+                        case FIRE:
+                            return 50;
+                        case WATER:
+                            return 200;
+                        case ELECTRIC:
+                            return 100;
+                        case GRASS:
+                            return 200;
+                        case ICE:
+                            return 100;
+                        case FIGHTING:
+                            return 200;
+                        case POISON:
+                            return 50;
+                        case GROUND:
+                            return 200;
+                        case FLYING:
+                            return 50;
+                        case PSYCHIC:
+                            return 100;
+                        case BUG:
+                            return 100;
+                        case ROCK:
+                            return 100;
+                        case GHOST:
+                            return 100;
+                        case DRAGON:
+                            return 100;
+                        case DARK:
+                            return 100;
+                        case STEEL:
+                            return 200;
+                        case FAIRY:
+                            return 100;
+                        default:
+                            return 100;
+                        }
+                        break;
+                    case GHOST:
+                        switch (angrep){
+                          case NORMAL:
+                              return 0;
+                          case FIRE:
+                              return 100;
+                          case WATER:
+                              return 100;
+                          case ELECTRIC:
+                              return 100;
+                          case GRASS:
+                              return 100;
+                          case ICE:
+                              return 100;
+                          case FIGHTING:
+                              return 0;
+                          case POISON:
+                              return 50;
+                          case GROUND:
+                              return 100;
+                          case FLYING:
+                              return 100;
+                          case PSYCHIC:
+                              return 100;
+                          case BUG:
+                              return 50;
+                          case ROCK:
+                              return 100;
+                          case GHOST:
+                              return 200;
+                          case DRAGON:
+                              return 100;
+                          case DARK:
+                              return 200;
+                          case STEEL:
+                              return 100;
+                          case FAIRY:
+                              return 100;
+                          default:
+                              return 100;
+                          }
+                          break;
+                    case DRAGON:
+                        switch (angrep){
+                        case NORMAL:
+                            return 100;
+                        case FIRE:
+                            return 50;
+                        case WATER:
+                            return 50;
+                        case ELECTRIC:
+                            return 50;
+                        case GRASS:
+                            return 50;
+                        case ICE:
+                            return 200;
+                        case FIGHTING:
+                            return 100;
+                        case POISON:
+                            return 100;
+                        case GROUND:
+                            return 100;
+                        case FLYING:
+                            return 100;
+                        case PSYCHIC:
+                            return 100;
+                        case BUG:
+                            return 100;
+                        case ROCK:
+                            return 100;
+                        case GHOST:
+                            return 100;
+                        case DRAGON:
+                            return 200;
+                        case DARK:
+                            return 100;
+                        case STEEL:
+                            return 100;
+                        case FAIRY:
+                            return 200;
+                        default:
+                            return 100;
+                        }
+                        break;
+                    case DARK:
+                        switch (angrep){
+                          case NORMAL:
+                              return 100;
+                          case FIRE:
+                              return 100;
+                          case WATER:
+                              return 100;
+                          case ELECTRIC:
+                              return 100;
+                          case GRASS:
+                              return 100;
+                          case ICE:
+                              return 100;
+                          case FIGHTING:
+                              return 200;
+                          case POISON:
+                              return 100;
+                          case GROUND:
+                              return 100;
+                          case FLYING:
+                              return 100;
+                          case PSYCHIC:
+                              return 0;
+                          case BUG:
+                              return 200;
+                          case ROCK:
+                              return 100;
+                          case GHOST:
+                              return 50;
+                          case DRAGON:
+                              return 100;
+                          case DARK:
+                              return 50;
+                          case STEEL:
+                              return 100;
+                          case FAIRY:
+                              return 200;
+                          default:
+                              return 100;
+                          }
+                          break;
+                    case STEEL:
+                      switch (angrep){
+                        case NORMAL:
+                            return 50;
+                        case FIRE:
+                            return 200;
+                        case WATER:
+                            return 100;
+                        case ELECTRIC:
+                            return 100;
+                        case GRASS:
+                            return 50;
+                        case ICE:
+                            return 50;
+                        case FIGHTING:
+                            return 200;
+                        case POISON:
+                            return 100;
+                        case GROUND:
+                            return 200;
+                        case FLYING:
+                            return 50;
+                        case PSYCHIC:
+                            return 50;
+                        case BUG:
+                            return 50;
+                        case ROCK:
+                            return 50;
+                        case GHOST:
+                            return 100;
+                        case DRAGON:
+                            return 50;
+                        case DARK:
+                            return 100;
+                        case STEEL:
+                            return 50;
+                        case FAIRY:
+                            return 50;
+                        default:
+                            return 100;
+                        }
+                        break;
+                    case FAIRY:
+                        switch (angrep){
+                          case NORMAL:
+                              return 100;
+                          case FIRE:
+                              return 100;
+                          case WATER:
+                              return 100;
+                          case ELECTRIC:
+                              return 100;
+                          case GRASS:
+                              return 100;
+                          case ICE:
+                              return 100;
+                          case FIGHTING:
+                              return 50;
+                          case POISON:
+                              return 200;
+                          case GROUND:
+                              return 100;
+                          case FLYING:
+                              return 100;
+                          case PSYCHIC:
+                              return 100;
+                          case BUG:
+                              return 50;
+                          case ROCK:
+                              return 100;
+                          case GHOST:
+                              return 100;
+                          case DRAGON:
+                              return 0;
+                          case DARK:
+                              return 50;
+                          case STEEL:
+                              return 200;
+                          case FAIRY:
+                              return 100;
+                          default:
+                              return 100;
+                          }
+                    break;
 
-
-        }
-        if (art ==BUG)
-            if( angrep == GRASS || angrep == FIGHTING
-                || angrep == GROUND)
-                return 50;
-            else if(angrep == FIRE || angrep == FLYING || angrep == ROCK)
-                return 200;
-            else return 100;
-
-        if (art == ROCK)
-            if(angrep == NORMAL || angrep == FIRE || angrep == POISON
-                || angrep == FLYING)
-                return 50;
-            else if (angrep == WATER || angrep == GRASS || angrep == FIGHTING
-                    ||angrep == GROUND || angrep == STEEL)
-                return 200;
-            else return 100;
-
+            }
     }
 };
-
