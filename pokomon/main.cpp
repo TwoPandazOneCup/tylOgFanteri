@@ -4,17 +4,16 @@
 #include <string>
 #include "pokemon.h"
 using namespace std;
-
+/*
 class NyPokemon: public Pokemon
 {
 
 };
-
+*/
 int main(int argc, char** argv)
 {
-    NyPokemon charizard;
-    charizard.pokeDexNr = 1;
-    charizard.printPok();
+    Pokemon charizard(4, 3);
+
     cout <<"Ein vill "<< charizard.namngje() <<" truffe "<<endl;
     return 0;
 }

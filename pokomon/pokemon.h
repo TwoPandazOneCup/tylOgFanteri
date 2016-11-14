@@ -27,7 +27,7 @@ class Pokemon
 {
 public:
 
-
+    Pokemon(int x, int y);
     type art;
     unsigned short int level = 1;
     unsigned short int pokeDexNr;
@@ -124,7 +124,6 @@ public:
         string out = getFileContents(ifs);
         cout << out;
     }
-
 
     int angrip(type angrep)
     {
@@ -832,3 +831,9 @@ public:
             }
     }
 };
+
+Pokemon::Pokemon(int x, int y)
+{
+    pokeDexNr = x;
+    level = y;
+}
