@@ -74,7 +74,8 @@ public:
         x = pokeDexNr;
         char filnamn[3];
         for (int i = 0; i < 2; ++i){
-            if (x <= 9 || x >= 1) filnamn[0] = x + 48;
+            if (x <= 9 || x >= 1 ) filnamn[0] = x + 48;
+            filnamn[i] = 0;
         }
         cout << filnamn << endl;
         ifstream  ifs;
