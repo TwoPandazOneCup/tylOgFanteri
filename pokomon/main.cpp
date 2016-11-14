@@ -10,10 +10,11 @@ class NyPokemon: public Pokemon
 
 };
 
-int main()
+int main(int argc, char** argv)
 {
     NyPokemon charizard;
-    charizard.pokeDexNr = 9;
-    charizard.printPok(1);
+    charizard.pokeDexNr = 1;
+    charizard.printPok();
+    cout <<"Ein vill "<< charizard.namngje() <<" truffe "<<endl;
     return 0;
 }

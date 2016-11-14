@@ -1,5 +1,6 @@
 using namespace std;
 #include <fstream>
+#include <string>
 enum type
 {
 
@@ -26,10 +27,11 @@ class Pokemon
 {
 public:
 
+
     type art;
     unsigned short int level = 1;
     unsigned short int pokeDexNr;
-    string namn;
+    string namn = namngje();
 
     string angripOgPrint(type angrep)
     {
@@ -47,6 +49,26 @@ public:
                 return "normalskade";
         }
     }
+
+    string namngje()
+    {
+        int x = pokeDexNr;
+        switch (x) {
+            case 0:
+                return "MinssingNo";
+            case 1:
+                return "Bulbasaur";
+            case 2:
+                return "Ivysaur";
+            case 3:
+                return "Venasaur";
+            case 130:
+                return "Gyarados";
+            default:
+                return "ugyldig";
+        }
+    }
+
     std::string getFileContents (std::ifstream& File)
     {
         std::string Lines = "";        //All lines
@@ -69,20 +91,40 @@ public:
         }
     }
 
-    void printPok(int x)
+    void printPok()
     {
-        x = pokeDexNr;
+        int x = pokeDexNr;
         char filnamn[3];
-        for (int i = 0; i < 2; ++i){
-            if (x <= 9 || x >= 1 ) filnamn[0] = x + 48;
-            filnamn[i] = 0;
-        }
-        cout << filnamn << endl;
+
+            if (x <= 9 || x <= 1 ){
+                filnamn[0] = x + 48;
+                filnamn[1] = '\0';
+                filnamn[2] = '\0';
+                filnamn[3] = '\0';
+            }
+            if (x >= 10 && x <= 99) {
+                filnamn[0] = (x / 10) + 48;
+                filnamn[1] = (x % 10) + 48;
+                filnamn[2] = '\0';
+                filnamn[3] = '\0';
+            }
+            if ( x >= 100){
+                filnamn[0] = (x / 100) + 48;
+                filnamn[1] = ((x -100) / 10) + 48;
+                filnamn[2] = (x % 10) + 48;
+                filnamn[3] = '\0';
+
+            }
+
+        //cout << filnamn << endl;
         ifstream  ifs;
-        ifs.open(filnamn);
+        char mappe[] = "kunstverk/";
+        strcat(mappe, filnamn);
+        ifs.open(mappe);
         string out = getFileContents(ifs);
         cout << out;
     }
+
 
     int angrip(type angrep)
     {
