@@ -27,8 +27,11 @@ enum type
 class Pokemon
 {
 public:
+    void printPok();
 
     Pokemon(int x, int y, int z);
+    string pokString();
+
     type art;
     unsigned short int level;
     unsigned short int pokeDexNr;
@@ -36,6 +39,7 @@ public:
     string namn;
     string namngje(int x);
     int angrip(type angrep);
+    string bilete = pokString();
 
     string angripOgPrint(type angrep)
     {
@@ -77,39 +81,7 @@ public:
         }
     }
 
-    void printPok()
-    {
-        int x = pokeDexNr;
-        char filnamn[3];
 
-            if (x <= 9 || x <= 1 ){
-                filnamn[0] = x + 48;
-                filnamn[1] = '\0';
-                filnamn[2] = '\0';
-                filnamn[3] = '\0';
-            }
-            if (x >= 10 && x <= 99) {
-                filnamn[0] = (x / 10) + 48;
-                filnamn[1] = (x % 10) + 48;
-                filnamn[2] = '\0';
-                filnamn[3] = '\0';
-            }
-            if ( x >= 100){
-                filnamn[0] = (x / 100) + 48;
-                filnamn[1] = ((x -100) / 10) + 48;
-                filnamn[2] = (x % 10) + 48;
-                filnamn[3] = '\0';
-
-            }
-
-        //cout << filnamn << endl;
-        ifstream  ifs;
-        char mappe[] = "kunstverk/";
-        strcat(mappe, filnamn);
-        ifs.open(mappe);
-        string out = getFileContents(ifs);
-        cout << out;
-    }
 };
 
 
@@ -1138,4 +1110,72 @@ int Pokemon::angrip(type angrep)
                 break;
 
         }
+}
+
+void Pokemon::printPok()
+{
+    int x = pokeDexNr;
+    char filnamn[3];
+
+        if (x <= 9 || x <= 1 ){
+            filnamn[0] = x + 48;
+            filnamn[1] = '\0';
+            filnamn[2] = '\0';
+            filnamn[3] = '\0';
+        }
+        if (x >= 10 && x <= 99) {
+            filnamn[0] = (x / 10) + 48;
+            filnamn[1] = (x % 10) + 48;
+            filnamn[2] = '\0';
+            filnamn[3] = '\0';
+        }
+        if ( x >= 100){
+            filnamn[0] = (x / 100) + 48;
+            filnamn[1] = ((x -100) / 10) + 48;
+            filnamn[2] = (x % 10) + 48;
+            filnamn[3] = '\0';
+
+        }
+
+    //cout << filnamn << endl;
+    ifstream  ifs;
+    char mappe[] = "kunstverk/";
+    strcat(mappe, filnamn);
+    ifs.open(mappe);
+    string out = getFileContents(ifs);
+    cout << out;
+}
+
+string Pokemon::pokString()
+{
+    int x = pokeDexNr;
+    char filnamn[3];
+
+        if (x <= 9 || x <= 1 ){
+            filnamn[0] = x + 48;
+            filnamn[1] = '\0';
+            filnamn[2] = '\0';
+            filnamn[3] = '\0';
+        }
+        if (x >= 10 && x <= 99) {
+            filnamn[0] = (x / 10) + 48;
+            filnamn[1] = (x % 10) + 48;
+            filnamn[2] = '\0';
+            filnamn[3] = '\0';
+        }
+        if ( x >= 100){
+            filnamn[0] = (x / 100) + 48;
+            filnamn[1] = ((x -100) / 10) + 48;
+            filnamn[2] = (x % 10) + 48;
+            filnamn[3] = '\0';
+
+        }
+
+    //cout << filnamn << endl;
+    ifstream  ifs;
+    char mappe[] = "kunstverk/";
+    strcat(mappe, filnamn);
+    ifs.open(mappe);
+    string out = getFileContents(ifs);
+    return out;
 }

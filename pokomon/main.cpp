@@ -4,6 +4,7 @@
 #include <string>
 #include <cstdlib>
 #include "pokemon.h"
+#include <ncurses.h>
 
 #define ANGREPSSTYRKE 100
 using namespace std;
@@ -21,9 +22,12 @@ int main(int argc, char** argv)
   fiende.printPok();
   fiende.art = GRASS;
   int angrepsStyrke = 100;
-  cout <<"lvl "<<fiende.level<<" "<<fiende.namn<< " med " <<fiende.liv <<" liv truffe" << endl;
+  cout <<"lvl "<<fiende.pokeDexNr<<" "<<fiende.namn<< " med " <<fiende.liv <<" liv truffe" << endl;
   char inputchar;
-	while (fiende.liv > 0)
+
+
+
+    /*while (fiende.liv > 0)
 	{
         cin >> inputchar;
         if (fiende.liv == 0 || inputchar == 'q')
@@ -109,7 +113,7 @@ int main(int argc, char** argv)
 	}
 	if (fiende.liv <= 0)
 		cout << fiende.namn<<" er dau, gratulere \n";
-
+*/
 
 
 
