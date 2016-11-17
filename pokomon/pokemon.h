@@ -27,10 +27,11 @@ class Pokemon
 {
 public:
 
-    Pokemon(int x, int y);
+    Pokemon(int x, int y, int z);
     type art;
-    unsigned short int level = 1;
+    unsigned short int level;
     unsigned short int pokeDexNr;
+    int liv;
     string namn;
     string namngje(int x);
     int angrip(type angrep);
@@ -111,11 +112,12 @@ public:
 };
 
 
-Pokemon::Pokemon(int x, int y)
+Pokemon::Pokemon(int pokeNr, int nivaa, int piv)
 {
-    pokeDexNr = x;
-    level = y;
-    namn = namngje(x);
+    pokeDexNr = pokeNr;
+    level = nivaa;
+	liv = piv;
+    namn = namngje(pokeNr);
 }
 
 string Pokemon::namngje(int x)
