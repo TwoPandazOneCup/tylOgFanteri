@@ -27,30 +27,21 @@ int main()
 	int temperatur = 0;
 	int vekt = 0;
 	int mid = 0;
-	int retteLinje[128];
-	for( int i = 0; i < 127; ++i)
-		retteLinje[i] = 0;
-
 	Goldilock g;
 	string tal;
 
-	//cout << contents;
-
-	
 	while(contents.at(i) != ';' )
 	{
 		c = contents.at(i);
-		//cout << static_cast<int>(c) <<endl;
+
 		if(c == '\n' || c == ' ')
 		{
 			mid = stoi(tal);
-			
 			if( c == ' ')
 			{
 				vekt = mid;
 				if(linje == 0)
 					g.vekt = vekt;
-			
 			}
 			if( c == '\n')
 			{
@@ -60,13 +51,9 @@ int main()
 					g.temp =  temperatur;
 				else
 					input.push_back(make_pair(vekt, temperatur));
-				
-							
+				++linje;
 			}
 			tal.clear();
-
-			if(c == '\n')
-				++linje;
 		}
 		else
 		{
@@ -77,6 +64,7 @@ int main()
 		++i;
 			
 	}
+	
 	cout << g.vekt << " " <<g.temp <<endl;
 	cout <<"vekt\t" << "temperaturar" << endl;
 	
@@ -86,8 +74,10 @@ int main()
 	for(int i = 0; i < input.size(); ++i)
 		if(input[i].first > g.vekt && input[i].second < g.temp)
 			resultat.push_back(i + 1);
+	cout <<"godtatte stolar:" << endl;
 	for(int i = 0; i < resultat.size() ; ++i)
-		cout << resultat[i] << " " <<endl;
+		cout << resultat[i] << " ";
+	cout << endl;
 
 }
 	
