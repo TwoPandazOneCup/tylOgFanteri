@@ -1,0 +1,31 @@
+#include <utility>
+#include <string>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+  vector<pair<string, string>> element;
+  
+  ifstream ist{"atom"};
+  char c;
+  int v;
+  string linje;
+  while(ist >> c)
+    {
+    linje.at(v) = c;
+    if( c == '\n')
+      {
+	
+      }
+    }
+  
+  
+      
+  element[1].first = "H";
+  element[1].second = "Hydrdogen";
+  
+  cout << element[1].first << " " << element[1].second;
+}
